@@ -1,0 +1,10 @@
+
+this folder must contain 2 csv files
+
+1. fer2013.csv
+2. fer2013new.csv
+
+if not found download from:
+
+fer2013 : https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data
+fer2013new: https://github.com/Microsoft/FERPlus

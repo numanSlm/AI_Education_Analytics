@@ -1,0 +1,78 @@
+# Source directory
+
+**`cleaning.py` uses `utli.py` funtions to create the cleaned Dataset from `./fer2013/fer2013.csv` and `./fer2013/fer2013new.csv` named `Cleaned_data.csv`**
+
+** `train.py` uses 'classes.py` to create models, create learner and couples the dataloader and train models and save the results, fiugre and plots in directory `models`
+
+** the best model found should be put in `bets_model` directory to be used by `predict.py`
+
+**
+Note: due the Large size of state dictionary of models the models parameters are not incuded.
+.
+├── best_model: the best model trainied by `train.py` and `trainPredict.py` should be put in this directory and the `Predict.py` code will search and load the model from this directory
+├── classes.py: Learner class, Dataloader class and Resnet model are in this file
+├── Cleaned_data.csv 
+├── cleaning.ipynb
+├── cleaning.py "runing this code deletes all low quality images and generally cleans and stores the Data"
+├── DataSet
+│   ├── angry
+│   ├── bored
+│   ├── focused
+│   └── neutral
+├── fer2013: original datasets and their citations and ways to download and use
+│   ├── fer2013.csv
+│   ├── fer2013new.csv
+│   └── README
+├── folds : contain 10 models and the training logs for 10 folds
+│   ├── B16_N8_FC2_K5_AP20_fold0
+│   ├── B16_N8_FC2_K5_AP20_fold1
+│   ├── B16_N8_FC2_K5_AP20_fold2
+│   ├── B16_N8_FC2_K5_AP20_fold3
+│   ├── B16_N8_FC2_K5_AP20_fold4
+│   ├── B16_N8_FC2_K5_AP20_fold5
+│   ├── B16_N8_FC2_K5_AP20_fold6
+│   ├── B16_N8_FC2_K5_AP20_fold7
+│   ├── B16_N8_FC2_K5_AP20_fold8
+│   ├── B16_N8_FC2_K5_AP20_fold9
+│   ├── create_fold_results.ipynb
+│   ├── create_fold_results.py
+│   └── fold_results.csv
+├── Gender_Age_DataSet: a labeled dataset which will be used to mitigate and fix biases
+│   ├── angry
+│   ├── bored
+│   ├── focused
+│   └── neutral
+├── models: 12 models and their training logs and metrics plots with different hypter-parameters
+│   ├── B16_N12_FC4_K3_AP20
+│   ├── B16_N12_FC4_K5_AP20
+│   ├── B16_N12_FC4_K7_AP20
+│   ├── B16_N4_FC1_K3_AP20
+│   ├── B16_N4_FC1_K5_AP20
+│   ├── B16_N4_FC1_K7_AP20
+│   ├── B16_N8_FC2_K3_AP20
+│   ├── B16_N8_FC2_K5_AP20
+│   ├── B16_N8_FC2_K7_AP20
+│   ├── B32_N4_FC1_K3_AP20
+│   ├── B32_N4_FC1_K5_AP20
+│   ├── B32_N4_FC1_K7_AP20
+│   ├── B32_N8_FC2_K3_AP20
+│   ├── B32_N8_FC2_K5_AP20
+│   ├── B32_N8_FC2_K7_AP20
+│   ├── results.csv
+│   └── Untitled.ipynb
+├── predict.py "Used to predict the labeled dataset to find and assess model for its biases toward gender and age"
+├── pred_resutls.csv 
+├── README
+├── trainPredict.py "training model and iteratin different folds creating `folds` directory and saving logs and best model in each fold directory" 
+├── train.py "training model and iteratin different architechters creating `models` directory" 
+├── retrain.py "uses the data in Gender_age DataSet to retrain the model and fixing the gap between adult and child accuracy"
+└── utils.py "used by Cleaning.py containing utility functions"
+
+
+## Steps to run the codes:
+1. cleaning.py
+2. train.py
+3. trainPredict.py (put the desired hyperparameters in the cofig part for further training, the predicting will be done in the code as well)
+3. copy the desired model to `best_model` directory
+4. run Predict.py
+5. retrain (loads the model in `best_model` directory and trains it with images in `Gender_Age_DataSet`

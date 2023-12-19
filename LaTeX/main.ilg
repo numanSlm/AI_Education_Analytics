@@ -1,0 +1,393 @@
+This is makeindex, version 2.15 [TeX Live 2022/dev] (kpathsea + Thai support).
+Scanning input file main.tex...
+!! Input index error (file = main.tex, line = 1):
+   -- Unknown index keyword \documentclass[].
+!! Input index error (file = main.tex, line = 2):
+   -- Unknown index keyword \usepackage[notransparent].
+!! Input index error (file = main.tex, line = 3):
+   -- Unknown index keyword \usepackage.
+!! Input index error (file = main.tex, line = 4):
+   -- Unknown index keyword \hypersetup.
+!! Input index error (file = main.tex, line = 5):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 6):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 7):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 8):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 9):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 10):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 11):
+   -- Unknown index keyword \usepackage.
+!! Input index error (file = main.tex, line = 12):
+   -- Unknown index keyword \usepackage.
+!! Input index error (file = main.tex, line = 14):
+   -- Unknown index keyword \usepackage[left=0.8in,top=1in,right=0.8in,bottom=1in].
+!! Input index error (file = main.tex, line = 15):
+   -- Unknown index keyword \begin.
+!! Input index error (file = main.tex, line = 16):
+   -- Unknown index keyword \begin.
+!! Input index error (file = main.tex, line = 17):
+   -- Unknown index keyword \begin.
+!! Input index error (file = main.tex, line = 18):
+   -- Unknown index keyword \vspace*.
+!! Input index error (file = main.tex, line = 20):
+   -- Unknown index keyword \includesvg.
+!! Input index error (file = main.tex, line = 22):
+   -- Unknown index keyword \vspace*.
+!! Input index error (file = main.tex, line = 24):
+   -- Unknown index keyword \textbf.
+!! Input index error (file = main.tex, line = 26):
+   -- Unknown index keyword \vspace.
+!! Input index error (file = main.tex, line = 27):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 29):
+   -- Unknown index keyword \vspace.
+!! Input index error (file = main.tex, line = 30):
+   -- Unknown index keyword \textbf.
+!! Input index error (file = main.tex, line = 31):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 32):
+   -- Unknown index keyword \vspace.
+!! Input index error (file = main.tex, line = 34):
+   -- Unknown index keyword \textbf.
+!! Input index error (file = main.tex, line = 35):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 38):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 40):
+   -- Unknown index keyword \textbf.
+!! Input index error (file = main.tex, line = 41):
+   -- Unknown index keyword \href.
+!! Input index error (file = main.tex, line = 43):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 46):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 48):
+   -- Unknown index keyword \end.
+!! Input index error (file = main.tex, line = 49):
+   -- Unknown index keyword \end.
+!! Input index error (file = main.tex, line = 50):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 51):
+   -- Unknown index keyword \chapter.
+!! Input index error (file = main.tex, line = 52):
+   -- Unknown index keyword \section.
+!! Input index error (file = main.tex, line = 53):
+   -- Unknown index keyword TheprimarydatasetemployedinthisprojectistheFER2013dataset\cite.
+!! Input index error (file = main.tex, line = 55):
+   -- Unknown index keyword Comprisinggrayscaleimages,eachmeasuring$48\times48$pixels,theFER2013datasetboastsanimpressivetotalof\textbf.
+!! Input index error (file = main.tex, line = 57):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 59):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 62):
+   -- Unknown index keyword \begin.
+!! Input index error (file = main.tex, line = 63):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 64):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 65):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 66):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 67):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 68):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 69):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 70):
+   -- Unknown index keyword \end.
+!! Input index error (file = main.tex, line = 72):
+   -- Unknown index keyword \begin.
+!! Input index error (file = main.tex, line = 73):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 74):
+   -- Unknown index keyword \caption.
+!! Input index error (file = main.tex, line = 75):
+   -- Unknown index keyword \begin.
+!! Input index error (file = main.tex, line = 77):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 78):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 79):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 80):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 81):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 82):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 83):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 84):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 85):
+   -- Unknown index keyword \end.
+!! Input index error (file = main.tex, line = 86):
+   -- Unknown index keyword \end.
+!! Input index error (file = main.tex, line = 87):
+   -- Unknown index keyword \begin.
+!! Input index error (file = main.tex, line = 88):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 89):
+   -- Unknown index keyword \includesvg[width=0.7\textwidth].
+!! Input index error (file = main.tex, line = 90):
+   -- Unknown index keyword \caption.
+!! Input index error (file = main.tex, line = 91):
+   -- Unknown index keyword \end.
+!! Input index error (file = main.tex, line = 92):
+   -- Unknown index keyword \section.
+!! Input index error (file = main.tex, line = 93):
+   -- Unknown index keyword In2016EmadBarsoumetal.intheirpaper"TrainingDeepNetworksforFacialExpressionRecognitionwithCrowd-SourcedLabelDistribution"\cite.
+!! Input index error (file = main.tex, line = 95):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 97):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 100):
+   -- Unknown index keyword Intheyear2016,EmadBarsoumandcolleagues,intheirpapertitled"TrainingDeepNetworksforFacialExpressionRecognitionwithCrowd-SourcedLabelDistribution"\cite.
+!! Input index error (file = main.tex, line = 102):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 104):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 106):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 108):
+   -- Unknown index keyword \begin.
+!! Input index error (file = main.tex, line = 109):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 110):
+   -- Unknown index keyword \caption.
+!! Input index error (file = main.tex, line = 111):
+   -- Unknown index keyword \begin.
+!! Input index error (file = main.tex, line = 112):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 113):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 114):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 115):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 116):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 117):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 118):
+   -- Unknown index keyword \end.
+!! Input index error (file = main.tex, line = 119):
+   -- Unknown index keyword \end.
+!! Input index error (file = main.tex, line = 122):
+   -- Unknown index keyword \chapter.
+!! Input index error (file = main.tex, line = 123):
+   -- Unknown index keyword \section.
+!! Input index error (file = main.tex, line = 125):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 127):
+   -- Unknown index keyword \begin.
+!! Input index error (file = main.tex, line = 128):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 129):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 130):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 131):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 132):
+   -- Unknown index keyword \end.
+!! Input index error (file = main.tex, line = 134):
+   -- Unknown index keyword Avisualrepresentationofsomeimageslabeledas'NotFace'bythetaggerscanbeobservedinFig.\ref.
+!! Input index error (file = main.tex, line = 136):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 138):
+   -- Unknown index keyword \begin.
+!! Input index error (file = main.tex, line = 139):
+   -- Unknown index keyword \label.
+!! Input index error (file = main.tex, line = 140):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 141):
+   -- Unknown index keyword \subfloat[ImageswithNF=10].
+!! Input index error (file = main.tex, line = 142):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 143):
+   -- Unknown index keyword \subfloat[ImageswithNF=2].
+!! Input index error (file = main.tex, line = 144):
+   -- Unknown index keyword \caption.
+!! Input index error (file = main.tex, line = 145):
+   -- Unknown index keyword \end.
+!! Input index error (file = main.tex, line = 146):
+   -- Unknown index keyword \section.
+!! Input index error (file = main.tex, line = 147):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 148):
+   -- Unknown index keyword \begin.
+!! Input index error (file = main.tex, line = 149):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 150):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 151):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 152):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 153):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 154):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 155):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 156):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 157):
+   -- Unknown index keyword \end.
+!! Input index error (file = main.tex, line = 159):
+   -- Unknown index keyword \begin.
+!! Input index error (file = main.tex, line = 160):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 161):
+   -- Unknown index keyword \subfloat[Imageswithunknown=6].
+!! Input index error (file = main.tex, line = 162):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 163):
+   -- Unknown index keyword \subfloat[Imageswithunknown=5].
+!! Input index error (file = main.tex, line = 164):
+   -- Unknown index keyword \caption.
+!! Input index error (file = main.tex, line = 165):
+   -- Unknown index keyword \label.
+!! Input index error (file = main.tex, line = 166):
+   -- Unknown index keyword \end.
+!! Input index error (file = main.tex, line = 168):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 170):
+   -- Unknown index keyword Foravisualrepresentationoftheimageswithnon-zero'unknown'scores,pleaserefertoFigure\ref.
+!! Input index error (file = main.tex, line = 174):
+   -- Unknown index keyword \chapter.
+!! Input index error (file = main.tex, line = 176):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 178):
+   -- Unknown index keyword \section.
+!! Input index error (file = main.tex, line = 179):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 181):
+   -- Unknown index keyword \section.
+!! Input index error (file = main.tex, line = 182):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 184):
+   -- Unknown index keyword \section.
+!! Input index error (file = main.tex, line = 185):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 187):
+   -- Unknown index keyword \section.
+!! Input index error (file = main.tex, line = 188):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 191):
+   -- Unknown index keyword \begin.
+!! Input index error (file = main.tex, line = 192):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 193):
+   -- Unknown index keyword \caption.
+!! Input index error (file = main.tex, line = 194):
+   -- Unknown index keyword \begin.
+!! Input index error (file = main.tex, line = 195):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 196):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 197):
+   -- Unknown index keyword Anger&\begin.
+!! Input index error (file = main.tex, line = 198):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 199):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 200):
+   -- Unknown index keyword \end.
+!! Input index error (file = main.tex, line = 201):
+   -- Unknown index keyword Neutral&\begin.
+!! Input index error (file = main.tex, line = 202):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 203):
+   -- Unknown index keyword \end.
+!! Input index error (file = main.tex, line = 204):
+   -- Unknown index keyword Focused&\begin.
+!! Input index error (file = main.tex, line = 205):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 206):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 207):
+   -- Unknown index keyword \end.
+!! Input index error (file = main.tex, line = 208):
+   -- Unknown index keyword Bored&\begin.
+!! Input index error (file = main.tex, line = 209):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 210):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 211):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 212):
+   -- Unknown index keyword \end.
+!! Input index error (file = main.tex, line = 213):
+   -- Unknown index keyword \end.
+!! Input index error (file = main.tex, line = 214):
+   -- Unknown index keyword \end.
+!! Input index error (file = main.tex, line = 215):
+   -- Unknown index keyword \chapter.
+!! Input index error (file = main.tex, line = 217):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 219):
+   -- Unknown index keyword \begin.
+!! Input index error (file = main.tex, line = 220):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 221):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 222):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 223):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 224):
+   -- Unknown index keyword \end.
+!! Input index error (file = main.tex, line = 226):
+   -- Unknown index keyword Thebar-plotoftheplot'speremotionisshowninFig.\ref.
+!! Input index error (file = main.tex, line = 228):
+   -- Unknown index keyword \begin.
+!! Input index error (file = main.tex, line = 229):
+   -- Unknown index keyword \label.
+!! Input index error (file = main.tex, line = 230):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 231):
+   -- Unknown index keyword \includesvg[width=0.7\linewidth].
+!! Input index error (file = main.tex, line = 232):
+   -- Unknown index keyword \caption.
+!! Input index error (file = main.tex, line = 233):
+   -- Unknown index keyword \end.
+!! Input index error (file = main.tex, line = 234):
+   -- Unknown index keyword \begin.
+!! Input index error (file = main.tex, line = 235):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 236):
+   -- Unknown index keyword \subfloat[Samplesofimageslabeledas'Angry'].
+!! Input index error (file = main.tex, line = 237):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 238):
+   -- Unknown index keyword \subfloat[Samplesofimageslabeledas'Bored'].
+!! Input index error (file = main.tex, line = 239):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 240):
+   -- Unknown index keyword \subfloat[Samplesofimageslabeledas'Neutral'].
+!! Input index error (file = main.tex, line = 241):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = main.tex, line = 242):
+   -- Unknown index keyword \subfloat[Samplesofimageslabeledas'Focused'].
+!! Input index error (file = main.tex, line = 244):
+   -- Unknown index keyword \caption.
+!! Input index error (file = main.tex, line = 245):
+   -- Unknown index keyword \end.
+!! Input index error (file = main.tex, line = 247):
+   -- Unknown index keyword \bibliographystyle.
+!! Input index error (file = main.tex, line = 248):
+   -- Unknown index keyword \bibliography.
+!! Input index error (file = main.tex, line = 249):
+   -- Unknown index keyword \end.
+done (0 entries accepted, 194 rejected).
+Nothing written in main.ind.
+Transcript written in main.ilg.

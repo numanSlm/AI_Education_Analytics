@@ -1,0 +1,30 @@
+\begin{thebibliography}{1}
+
+\bibitem{FER2013}
+W.~C. Y.~B. Dumitru, Ian~Goodfellow, ``Challenges in representation learning:
+  Facial expression recognition challenge,'' 2013.
+
+\bibitem{barsoum2016training}
+E.~Barsoum, C.~Zhang, C.~C. Ferrer, and Z.~Zhang, ``Training deep networks for
+  facial expression recognition with crowd-sourced label distribution,'' in
+  {\em Proceedings of the 18th ACM international conference on multimodal
+  interaction}, pp.~279--283, 2016.
+
+\bibitem{torch}
+A.~Paszke, S.~Gross, F.~Massa, A.~Lerer, J.~Bradbury, G.~Chanan, T.~Killeen,
+  Z.~Lin, N.~Gimelshein, L.~Antiga, A.~Desmaison, A.~Kopf, E.~Yang, Z.~DeVito,
+  M.~Raison, A.~Tejani, S.~Chilamkurthy, B.~Steiner, L.~Fang, J.~Bai, and
+  S.~Chintala, ``Pytorch: An imperative style, high-performance deep learning
+  library,'' in {\em Advances in Neural Information Processing Systems 32},
+  pp.~8024--8035, Curran Associates, Inc., 2019.
+
+\bibitem{he2016deep}
+K.~He, X.~Zhang, S.~Ren, and J.~Sun, ``Deep residual learning for image
+  recognition,'' in {\em Proceedings of the IEEE conference on computer vision
+  and pattern recognition}, pp.~770--778, 2016.
+
+\bibitem{howard2018fastai}
+J.~Howard {\em et~al.}, ``fastai.'' \url{https://github.com/fastai/fastai},
+  2018.
+
+\end{thebibliography}

@@ -1,0 +1,279 @@
+\chapter{Training Models}
+
+In Section 1, we created a dataset consisting of 14,831 samples. The data split ratios were chosen as 70\%, 15\%, and 15\% for the training, validation, and test sets, respectively. This resulted in 10,382 samples for training, 2,225 samples for validation, and 2,224 samples for testing.
+
+To enhance the diversity of our training data and improve the robustness of the model, we applied two augmentation techniques during training:
+
+\begin{itemize}
+	\item \textbf{Horizontal Flip:} Images were horizontally flipped with a probability of $0.5$. This augmentation helps the model learn features invariant to left-right orientation changes.
+	
+	\item \textbf{Random Rotation:} Images were randomly rotated between $-10$ and $10$ degrees. This augmentation introduces variations in object orientations, aiding the model in becoming more rotation-invariant.
+\end{itemize}
+
+\section{CNN architecture}
+
+Implementation of the models is conducted in the PyTorch library\cite{torch}. 12 distinct CNN-based models are introduced to proficiently categorize images into 4 classes (Angry, Focused, Bored, Neutral). The architectural share common hyperparameters, including learning rate, training epochs, batch size, optimizer, and loss function, meticulously detailed in Table \ref{tab:hyper}.
+
+\begin{table}[h]
+	
+	\centering
+	\caption{Hyper Parameters used in Training}
+	\begin{tabular}{|c|c|}
+		\hline
+		Parameter        & Values      \\
+		\hline
+		Learning Rate    & 0.001       \\
+		Epochs           & 100         \\
+		Batch Size       & 64          \\
+		Optimizer        & Adam        \\
+		Loss Function    & Cross-Entropy\\
+		Weight Decay     & 0.0001      \\
+		\hline
+	\end{tabular}
+	\label{tab:hyper}
+\end{table}
+
+The overall architecture of the models, illustrated in Fig. \ref{fig:resblock}, comprises three fundamental components:
+
+\begin{enumerate}
+	\item \textbf{ResBlocks:} These form the initial segment of the models and were configured with depths of 4 and 8 layers. Convolutional layers within the ResBlocks utilized two configurations of 16 and 32 channels.
+	
+	For the ResBlock configuration, kernel sizes of $(3 \times 3)$, $(5 \times 5)$, and $(7 \times 7)$ were employed. Corresponding padding values of 1, 2, and 3 were used to ensure the output dimensions matched the input dimensions. Convolutional blocks within the ResBlocks were set to a striding of 1.
+	\begin{itemize}
+		\item \textbf{Kernel Sizes and Padding:}
+		\begin{itemize}
+			\item $(3\times 3)$: Padding was set to 1.
+			\item $(5\times 5)$: Padding was set to 2.
+			\item $(7\times 7)$: Padding was set to 3.
+		\end{itemize}
+	\end{itemize}
+	\item \textbf{Average Pooling and Flattening:} Following the ResBlocks, the output underwent Average Pooling to achieve a final size of $(20 \times 20)$.
+	
+	\item \textbf{Fully Connected Layers:} The final part of the model consisted of fully connected layers. The number of these layers was dynamically correlated with the number of ResBlocks, always maintaining a ratio of one-third of the ResBlocks, resulting in a range of 1 to 3 layers.
+\end{enumerate}
+
+
+\begin{figure}[h]
+	\centering
+	\includesvg[width=1\linewidth]{./imgs/resnet}
+	\caption{Schematic of Model Architecture}
+	\label{fig:resblock}
+\end{figure}
+
+\subsection{Resblock}
+Residual Networks, commonly known as ResNets, have become a cornerstone in deep learning architectures, particularly for image recognition tasks. At the heart of ResNets are residual blocks, a fundamental building block designed to address the challenge of training very deep neural networks\cite{he2016deep}. A residual block introduces a shortcut or a "skip connection" that allows the network to learn residual functions. Mathematically, given an input $x$, the output of a residual block can be represented as $F(x) + x$, where $F(x)$ is the learned residual. This architecture facilitates the flow of information through the network, mitigating the vanishing gradient problem and enabling the training of exceedingly deep networks. 
+
+\begin{figure}[h]
+	\centering
+	\includesvg[width=0.3\linewidth]{./imgs/resblock}
+	\caption{Resblock}
+	\label{fig:resblock}
+\end{figure}
+
+\subsection{Convolution Layers}
+Each convolution layer systematically applies convolution operations to input data, sequentially transmitting results to subsequent layers.
+
+\subsection{Activation Functions}
+Rectified Linear Unit (ReLU) is a widely used activation function in neural networks. It is defined as $f(x) = \max(0, x)$, keeping positive values unchanged and setting negative values to zero. ReLU introduces non-linearity to neural networks, aiding in learning complex patterns. Its simplicity and ability to address the vanishing gradient problem make it a popular choice.
+
+\subsection{BatchNorm2D}
+Batch Normalization (BatchNorm) is a widely used technique in deep learning to improve the training stability and convergence of neural networks. It operates by normalizing the input of a layer across a mini-batch of data. For a given mini-batch of size \(m\), the BatchNorm operation for a specific feature \(x\) can be expressed as follows:
+
+\begin{equation}
+	\hat{x} = \frac{x - \mu}{\sqrt{\sigma^2 + \epsilon}}
+\end{equation}
+
+where \(\hat{x}\) is the normalized input, \(\mu\) is the mean, \(\sigma^2\) is the variance, and \(\epsilon\) is a small constant to avoid division by zero.
+
+
+\subsection{Pooling Layers}
+The inclusion of pooling layers is indispensable, serving to reduce the dimensions of feature maps. This reduction minimizes trainable parameters, expediting computations without compromising crucial features. Additionally, pooling layers contribute significantly to averting overfitting risks in expansive networks, bolstering overall robustness and generalization in facial expression detection models.
+
+
+\subsection{Flattening Layer}
+Following convolutional and pooling operations, a Flatten layer is introduced in the model architecture. This critical layer transforms entire filter maps into a flattened representation, providing a comprehensive set of features to the subsequent classifier.
+
+\subsection{Fully-Connected Layers}
+In a fully-connected layer, each neuron or node is connected to every neuron in the previous layer, forming a dense matrix of weights. Given an input vector \(x\) and weight matrix \(W\), the output \(y\) of a fully-connected layer can be expressed as:
+
+\begin{equation}
+	y = \sigma(Wx + b)
+\end{equation}
+
+where \(W\) is the weight matrix, \(b\) is the bias vector, and \(\sigma\) is the activation function. The matrix multiplication \(Wx\) captures the weighted sum of inputs, and the bias term \(b\) is added.
+
+\section{Training Process}
+After creating a Training Data Loader, Validation DataLoader and Test Data Loader, a Learner class was created with couples the data loader and model. the learner handles traning of the model, logging the metrics, and loss and saves and load the trained models specified. The Learner fallacy is taken from Fast.ai\cite{howard2018fastai}. each model was trained by train dataset an epoch, followed by evaluted the model with validation dataset and if a new accuracy was found the model would be saved. An overall flow-chart of the training and evaluating process is shown in Fig.\ref{fig:train}.
+
+\begin{figure}
+	\centering
+	\includesvg[width=\linewidth]{imgs/train.svg}
+	\caption{Flow-chart of training and evaluation of the models}
+	\label{fig:train}
+\end{figure}
+\section{Metrics}
+
+The performance of the model is evaluated using following metrics:
+
+\begin{equation}
+	\text{Accuracy} = \frac{T_P + T_N}{T_P + T_N + F_P + F_N}
+\end{equation}
+
+Accuracy measures the overall correctness of the model's predictions.
+
+\begin{equation}
+	\text{Precision} = \frac{T_P}{T_P + F_P}
+\end{equation}
+
+Precision represents the accuracy of the positive predictions made by the model.
+
+\begin{equation}
+	\text{Recall} = \frac{T_P}{T_P + F_N}
+\end{equation}
+
+Recall, also known as sensitivity, gauges the model's ability to capture all positive instances.
+
+\begin{equation}
+	\text{F1} = \frac{2 \times \text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}
+\end{equation}
+
+The F1 score is the harmonic mean of precision and recall, providing a balanced assessment of the model's performance.
+
+In the above equations, $T_P$ represents True Positive, $T_N$ represents True Negative, $F_P$ represents False Positive, and $F_N$ represents False Negative.
+
+
+\section{Evaluation}
+
+
+\subsection{Hyper-paremeter's effect}
+As illustrated in Fig.~\ref{fig:KvB} and Fig.~\ref{fig:KvN}, accuracy trends come to the forefront, highlighting the superiority of models kernel size  of$ (5\times5)$, over alternative sizes of $(3\times3)$ and $(7\times7)$.
+
+Examining Fig.~\ref{fig:NvK} and Fig.~\ref{fig:NvB}, a positive correlation emerges between an increased number of residual blocks and heightened accuracy. Notably, models with 8 ResBlocks outperform those with 4 ResBlocks.
+
+Concerning the number of channels within each ResBlock, no significant correlation is observed with accuracy. In Fig.~\ref{fig:KvB}, the relationship is not straightforward, as models with a kernel size of $(5\times5)$ and 16 channels achieve higher accuracy compared to those with 32 channels. However, this trend does not hold for kernel size $(3\times3)$.
+
+Remarkably, our model configuration B16{\_}N8{\_}FC2{\_}K5{\_}AP20 stands out as the pinnacle of performance, boasting an accuracy of 0.623371. The complete model architectures and respective accuracy values for each model are presented in Tables \ref{tab:results_macro} and \ref{tab:results_micro}.
+
+It is noticeable that the metrics in \ref{tab:results_micro} are all the same. This is reasonable as the dataset is evenly distributed among the four emotions.
+\begin{table}[h]
+	\caption{Summary of Model Architecture and the represented Accuracy's and Macro Metrics}
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\hline
+		Model Name & K Size & Block & Channels & FCs & Accuracy & Recall & Precision & F1 Score \\ \hline
+		B16\_N4\_FC1\_K3\_AP20 & 3 & 4 & 16 & 1 & 0.582472 & 0.581015 & 0.599142 & 0.585643 \\ \hline
+		B32\_N4\_FC1\_K3\_AP20 & 3 & 4 & 32 & 1 & 0.59236  & 0.595532 & 0.622576 & 0.596638 \\ \hline
+		B16\_N8\_FC2\_K3\_AP20 & 3 & 8 & 16 & 2 & 0.604494 & 0.600417 & 0.620104 & 0.59736  \\ \hline
+		B32\_N8\_FC2\_K3\_AP20 & 3 & 8 & 32 & 2 & 0.622022 & 0.618432 & 0.650313 & 0.622679 \\ \hline
+		B16\_N4\_FC1\_K5\_AP20 & 5 & 4 & 16 & 1 & 0.596404 & 0.598403 & 0.612813 & 0.595999 \\ \hline
+		B32\_N4\_FC1\_K5\_AP20 & 5 & 4 & 32 & 1 & 0.59236  & 0.595048 & 0.629317 & 0.590056 \\ \hline
+		B16\_N8\_FC2\_K5\_AP20 & 5 & 8 & 16 & 2 & \textbf{0.623371} & 0.621407 & 0.654631 & 0.611707 \\ \hline
+		B32\_N8\_FC2\_K5\_AP20 & 5 & 8 & 32 & 2 & 0.612135 & 0.615304 & 0.652023 & 0.613317 \\ \hline
+		B16\_N4\_FC1\_K7\_AP20 & 7 & 4 & 16 & 1 & 0.58382  & 0.580199 & 0.619654 & 0.579667 \\ \hline
+		B32\_N4\_FC1\_K7\_AP20 & 7 & 4 & 32 & 1 & 0.577978 & 0.582606 & 0.592769 & 0.584087 \\ \hline
+		B16\_N8\_FC2\_K7\_AP20 & 7 & 8 & 16 & 2 & 0.617978 & 0.611103 & 0.627087 & 0.609395 \\ \hline
+		B32\_N8\_FC2\_K7\_AP20 & 7 & 8 & 32 & 2 & 0.607191 & 0.610399 & 0.651253 & 0.608782 \\ \hline
+	\end{tabular}
+	\label{tab:results_macro}
+\end{table}
+
+\begin{table}[t]
+	\caption{Summary of Model Architecture and the represented Accuracy's and Micro Metrics}
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\hline
+		Model Name & K Size & Block & Channels & FCs & Accuracy & Recall & Precision & F1 Score \\ \hline
+		B16\_N4\_FC1\_K3\_AP20 & 3 & 4 & 16 & 1 & 0.582472 & 0.582472 & 0.582472 & 0.582472 \\ \hline
+		B32\_N4\_FC1\_K3\_AP20 & 3 & 4 & 32 & 1 & 0.59236  & 0.59236 & 0.59236 & 0.59236 \\ \hline
+		B16\_N8\_FC2\_K3\_AP20 & 3 & 8 & 16 & 2 & 0.604494 & 0.604494 & 0.604494 & 0.604494  \\ \hline
+		B32\_N8\_FC2\_K3\_AP20 & 3 & 8 & 32 & 2 & 0.622022 & 0.622022 & 0.622022 & 0.622022 \\ \hline
+		B16\_N4\_FC1\_K5\_AP20 & 5 & 4 & 16 & 1 & 0.596404 & 0.596404 & 0.596404 & 0.596404 \\ \hline
+		B32\_N4\_FC1\_K5\_AP20 & 5 & 4 & 32 & 1 & 0.59236  & 0.59236 & 0.59236 & 0.59236 \\ \hline
+		B16\_N8\_FC2\_K5\_AP20 & 5 & 8 & 16 & 2 & \textbf{0.623371} & 0.623371 & 0.623371 & 0.623371 \\ \hline
+		B32\_N8\_FC2\_K5\_AP20 & 5 & 8 & 32 & 2 & 0.612135 & 0.612135 & 0.612135 & 0.612135 \\ \hline
+		B16\_N4\_FC1\_K7\_AP20 & 7 & 4 & 16 & 1 & 0.58382  & 0.58382 & 0.58382 & 0.58382 \\ \hline
+		B32\_N4\_FC1\_K7\_AP20 & 7 & 4 & 32 & 1 & 0.577978 & 0.577978 & 0.577978 & 0.577978 \\ \hline
+		B16\_N8\_FC2\_K7\_AP20 & 7 & 8 & 16 & 2 & 0.617978 & 0.617978 & 0.617978 & 0.617978 \\ \hline
+		B32\_N8\_FC2\_K7\_AP20 & 7 & 8 & 32 & 2 & 0.607191 & 0.607191 & 0.607191 & 0.607191 \\ \hline
+	\end{tabular}
+	\label{tab:results_micro}
+	
+	
+\end{table}
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}{0.48\linewidth}
+		\centering
+		\includesvg[width=\linewidth]{imgs/BvK.svg}
+		\caption{Accuracy scores compared to ResBlock number of Channels and  Kernel Sizes }
+		\label{fig:BvK}
+	\end{subfigure}
+	\begin{subfigure}{0.48\linewidth}
+		\centering
+		\includesvg[width=\linewidth]{imgs/BvN.svg}
+		\caption{Accuracy scores compared to ResBlock number of channels and number of ResBlocks}
+		\label{fig:BvN}
+	\end{subfigure}
+	
+	\begin{subfigure}{0.48\linewidth}
+		\centering
+		\includesvg[width=\linewidth]{imgs/KvB.svg}
+		\caption{Accuracy scores compared to Kernel Sizes and ResBlock number of Channels}
+		\label{fig:KvB}
+	\end{subfigure}
+	\begin{subfigure}{0.48\linewidth}
+		\centering
+		\includesvg[width=\linewidth]{imgs/KvN.svg}
+		\caption{Accuracy scores compared to Kernel Sizes and number of ResBlocks}
+		\label{fig:KvN}
+	\end{subfigure}
+	
+	\begin{subfigure}{0.48\linewidth}
+		\centering
+		\includesvg[width=\linewidth]{imgs/NvK.svg}
+		\caption{Accuracy scores compared to Kernel Sizes and number of ResBlocks}
+		\label{fig:NvK}
+	\end{subfigure}
+	\begin{subfigure}{0.48\linewidth}
+		\centering
+		\includesvg[width=\linewidth]{imgs/NvB.svg}
+		\caption{Accuracy scores compared to ResBlock's number of channels and number of ResBlocks}
+		\label{fig:NvB}
+	\end{subfigure}
+	
+	\caption{hyper-parameter study}
+	\label{fig:overall}
+\end{figure}
+
+
+\newpage
+\subsection{Confusion Matrix Analysis}
+
+
+The Confusion Matrix for all models reveals that they generally perform well in predicting "Angry" images, achieving high accuracy. This is attributed to the distinct features of angry faces, such as large eyes, open mouths, and an aggressive facial expression.
+
+Furthermore, the models demonstrate proficiency in correctly classifying "Bored" images, as the bored facial expression, characterized by downcast eyes and closed, straight mouths, is easily distinguishable.
+
+However, challenges arise in distinguishing between "Focused" and "Neutral" expressions. This is reasonable, considering that both expressions involve eyes staring at the camera and closed lips. Even at a human level, differentiation between focused and neutral faces proves challenging.
+
+Examining the Loss plots, a notable trend emerges: as the model's layer count decreases, there is an increased risk of overfitting. With each training epoch, the validation loss consistently rises. Conversely, as the model size increases, the validation loss remains stable and fluctuates less compared to models with fewer layers.
+
+
+\section{Conclusions and Forward Look:}
+
+Furthermore, exploring advanced models like ResNets, R-CNNs, Fast RCNNs, Faster R-CNN, and YOLO could further enhance overall model performance.
+
+
+Additionally, better labeling of the dataset and increasing the quality of the dataset might be significantly helpful.
+
+Finally, the key notes of the model comparison are as follows:
+
+\begin{itemize}
+	\item Models with $(5\times5)$ kernel sizes outperform $(3\times3)$ and $(7\times7)$.
+	\item Positive correlation observed between ResBlocks and accuracy; 8 ResBlocks outperform 4.
+	\item No significant correlation found between channel count in ResBlocks and accuracy.
+	\item Model \texttt{B16\_N8\_FC2\_K5\_AP20} excels with an accuracy of 0.623371.
+	\item Confusion Matrix shows strong performance in predicting "Angry" and "Bored" expressions.
+	\item Difficulty distinguishing between "Focused" and "Neutral" expressions.
+	\item Loss plots indicate increased overfitting risk with fewer layers; larger models show more stability.
+\end{itemize}
+
+

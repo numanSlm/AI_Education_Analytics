@@ -1,0 +1,312 @@
+
+% Row 1
+\begin{figure}
+    \centering
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includesvg[width=\linewidth]{res_imgs/B16_N4_FC1_K3_AP20confMatrixTest.svg}
+        \caption{Confusion Matrix on Test}
+        \label{fig:confMatrixTest}
+    \end{subfigure}
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includesvg[width=\linewidth]{res_imgs/B16_N4_FC1_K3_AP20Loss.svg}
+        \caption{Loss}
+        \label{fig:loss}
+    \end{subfigure}
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includesvg[width=\linewidth]{res_imgs/B16_N4_FC1_K3_AP20metrics_mocro.svg}
+        \caption{Metrics Macro}
+        \label{fig:metricsMacro}
+    \end{subfigure}
+
+    \caption{Caption derived from the upper directory: B16{\_}N4{\_}FC1{\_}K3{\_}AP20}
+    \label{fig:overallCaption}
+\end{figure}
+
+% Row 2
+\begin{figure}
+    \centering
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includesvg[width=\linewidth]{res_imgs/B32_N4_FC1_K3_AP20confMatrixTest.svg}
+        \caption{Confusion Matrix on Test}
+        \label{fig:confMatrixTest}
+    \end{subfigure}
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includesvg[width=\linewidth]{res_imgs/B32_N4_FC1_K3_AP20Loss.svg}
+        \caption{Loss}
+        \label{fig:loss}
+    \end{subfigure}
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includesvg[width=\linewidth]{res_imgs/B32_N4_FC1_K3_AP20metrics_mocro.svg}
+        \caption{Metrics Macro}
+        \label{fig:metricsMacro}
+    \end{subfigure}
+
+    \caption{Caption derived from the upper directory: B32{\_}N4{\_}FC1{\_}K3{\_}AP20}
+    \label{fig:overallCaption}
+\end{figure}
+
+% Row 3
+\begin{figure}
+    \centering
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includesvg[width=\linewidth]{res_imgs/B16_N8_FC2_K3_AP20confMatrixTest.svg}
+        \caption{Confusion Matrix on Test}
+        \label{fig:confMatrixTest}
+    \end{subfigure}
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includesvg[width=\linewidth]{res_imgs/B16_N8_FC2_K3_AP20Loss.svg}
+        \caption{Loss}
+        \label{fig:loss}
+    \end{subfigure}
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includesvg[width=\linewidth]{res_imgs/B16_N8_FC2_K3_AP20metrics_mocro.svg}
+        \caption{Metrics Macro}
+        \label{fig:metricsMacro}
+    \end{subfigure}
+
+    \caption{Caption derived from the upper directory: B16{\_}N8{\_}FC2{\_}K3{\_}AP20}
+    \label{fig:overallCaption}
+\end{figure}
+
+% Row 4
+\begin{figure}
+    \centering
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includesvg[width=\linewidth]{res_imgs/B32_N8_FC2_K3_AP20confMatrixTest.svg}
+        \caption{Confusion Matrix on Test}
+        \label{fig:confMatrixTest}
+    \end{subfigure}
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includesvg[width=\linewidth]{res_imgs/B32_N8_FC2_K3_AP20Loss.svg}
+        \caption{Loss}
+        \label{fig:loss}
+    \end{subfigure}
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includesvg[width=\linewidth]{res_imgs/B32_N8_FC2_K3_AP20metrics_mocro.svg}
+        \caption{Metrics Macro}
+        \label{fig:metricsMacro}
+    \end{subfigure}
+
+    \caption{Caption derived from the upper directory: B32{\_}N8{\_}FC2{\_}K3{\_}AP20}
+    \label{fig:overallCaption}
+\end{figure}
+
+% Row 5
+\begin{figure}
+    \centering
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includesvg[width=\linewidth]{res_imgs/B16_N4_FC1_K5_AP20confMatrixTest.svg}
+        \caption{Confusion Matrix on Test}
+        \label{fig:confMatrixTest}
+    \end{subfigure}
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includesvg[width=\linewidth]{res_imgs/B16_N4_FC1_K5_AP20Loss.svg}
+        \caption{Loss}
+        \label{fig:loss}
+    \end{subfigure}
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includesvg[width=\linewidth]{res_imgs/B16_N4_FC1_K5_AP20metrics_mocro.svg}
+        \caption{Metrics Macro}
+        \label{fig:metricsMacro}
+    \end{subfigure}
+
+    \caption{Caption derived from the upper directory: B16{\_}N4{\_}FC1{\_}K5{\_}AP20}
+    \label{fig:overallCaption}
+\end{figure}
+
+% Row 6
+\begin{figure}
+    \centering
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includesvg[width=\linewidth]{res_imgs/B32_N4_FC1_K5_AP20confMatrixTest.svg}
+        \caption{Confusion Matrix on Test}
+        \label{fig:confMatrixTest}
+    \end{subfigure}
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includesvg[width=\linewidth]{res_imgs/B32_N4_FC1_K5_AP20Loss.svg}
+        \caption{Loss}
+        \label{fig:loss}
+    \end{subfigure}
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includesvg[width=\linewidth]{res_imgs/B32_N4_FC1_K5_AP20metrics_mocro.svg}
+        \caption{Metrics Macro}
+        \label{fig:metricsMacro}
+    \end{subfigure}
+
+    \caption{Caption derived from the upper directory: B32{\_}N4{\_}FC1{\_}K5{\_}AP20}
+    \label{fig:overallCaption}
+\end{figure}
+
+% Row 7
+\begin{figure}
+    \centering
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includesvg[width=\linewidth]{res_imgs/B16_N8_FC2_K5_AP20confMatrixTest.svg}
+        \caption{Confusion Matrix on Test}
+        \label{fig:confMatrixTest}
+    \end{subfigure}
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includesvg[width=\linewidth]{res_imgs/B16_N8_FC2_K5_AP20Loss.svg}
+        \caption{Loss}
+        \label{fig:loss}
+    \end{subfigure}
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includesvg[width=\linewidth]{res_imgs/B16_N8_FC2_K5_AP20metrics_mocro.svg}
+        \caption{Metrics Macro}
+        \label{fig:metricsMacro}
+    \end{subfigure}
+
+    \caption{Caption derived from the upper directory: B16{\_}N8{\_}FC2{\_}K5{\_}AP20}
+    \label{fig:overallCaption}
+\end{figure}
+
+% Row 8
+\begin{figure}
+    \centering
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includesvg[width=\linewidth]{res_imgs/B32_N8_FC2_K5_AP20confMatrixTest.svg}
+        \caption{Confusion Matrix on Test}
+        \label{fig:confMatrixTest}
+    \end{subfigure}
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includesvg[width=\linewidth]{res_imgs/B32_N8_FC2_K5_AP20Loss.svg}
+        \caption{Loss}
+        \label{fig:loss}
+    \end{subfigure}
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includesvg[width=\linewidth]{res_imgs/B32_N8_FC2_K5_AP20metrics_mocro.svg}
+        \caption{Metrics Macro}
+        \label{fig:metricsMacro}
+    \end{subfigure}
+
+    \caption{Caption derived from the upper directory: B32{\_}N8{\_}FC2{\_}K5{\_}AP20}
+    \label{fig:overallCaption}
+\end{figure}
+
+% Row 9
+\begin{figure}
+    \centering
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includesvg[width=\linewidth]{res_imgs/B16_N4_FC1_K7_AP20confMatrixTest.svg}
+        \caption{Confusion Matrix on Test}
+        \label{fig:confMatrixTest}
+    \end{subfigure}
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includesvg[width=\linewidth]{res_imgs/B16_N4_FC1_K7_AP20Loss.svg}
+        \caption{Loss}
+        \label{fig:loss}
+    \end{subfigure}
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includesvg[width=\linewidth]{res_imgs/B16_N4_FC1_K7_AP20metrics_mocro.svg}
+        \caption{Metrics Macro}
+        \label{fig:metricsMacro}
+    \end{subfigure}
+
+    \caption{Caption derived from the upper directory: B16{\_}N4{\_}FC1{\_}K7{\_}AP20}
+    \label{fig:overallCaption}
+\end{figure}
+
+% Row 10
+\begin{figure}
+    \centering
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includesvg[width=\linewidth]{res_imgs/B32_N4_FC1_K7_AP20confMatrixTest.svg}
+        \caption{Confusion Matrix on Test}
+        \label{fig:confMatrixTest}
+    \end{subfigure}
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includesvg[width=\linewidth]{res_imgs/B32_N4_FC1_K7_AP20Loss.svg}
+        \caption{Loss}
+        \label{fig:loss}
+    \end{subfigure}
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includesvg[width=\linewidth]{res_imgs/B32_N4_FC1_K7_AP20metrics_mocro.svg}
+        \caption{Metrics Macro}
+        \label{fig:metricsMacro}
+    \end{subfigure}
+
+    \caption{Caption derived from the upper directory: B32{\_}N4{\_}FC1{\_}K7{\_}AP20}
+    \label{fig:overallCaption}
+\end{figure}
+
+% Row 11
+\begin{figure}
+    \centering
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includesvg[width=\linewidth]{res_imgs/B16_N8_FC2_K7_AP20confMatrixTest.svg}
+        \caption{Confusion Matrix on Test}
+        \label{fig:confMatrixTest}
+    \end{subfigure}
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includesvg[width=\linewidth]{res_imgs/B16_N8_FC2_K7_AP20Loss.svg}
+        \caption{Loss}
+        \label{fig:loss}
+    \end{subfigure}
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includesvg[width=\linewidth]{res_imgs/B16_N8_FC2_K7_AP20metrics_mocro.svg}
+        \caption{Metrics Macro}
+        \label{fig:metricsMacro}
+    \end{subfigure}
+
+    \caption{Caption derived from the upper directory: B16{\_}N8{\_}FC2{\_}K7{\_}AP20}
+    \label{fig:overallCaption}
+\end{figure}
+
+% Row 12
+\begin{figure}
+    \centering
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includesvg[width=\linewidth]{res_imgs/B32_N8_FC2_K7_AP20confMatrixTest.svg}
+        \caption{Confusion Matrix on Test}
+        \label{fig:confMatrixTest}
+    \end{subfigure}
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includesvg[width=\linewidth]{res_imgs/B32_N8_FC2_K7_AP20Loss.svg}
+        \caption{Loss}
+        \label{fig:loss}
+    \end{subfigure}
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includesvg[width=\linewidth]{res_imgs/B32_N8_FC2_K7_AP20metrics_mocro.svg}
+        \caption{Metrics Macro}
+        \label{fig:metricsMacro}
+    \end{subfigure}
+
+    \caption{Caption derived from the upper directory: B32{\_}N8{\_}FC2{\_}K7{\_}AP20}
+    \label{fig:overallCaption}
+\end{figure}
